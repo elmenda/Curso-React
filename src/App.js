@@ -14,16 +14,10 @@ const ExampleProps = ({hero, isNobelWinner, rating, title}) => {
 
 export default function App() {
   return (
-    <div>
-      <ExampleProps 
-        hero={{
-          name: 'Nelson Mandela',
-          superPowers: ['Resilience', 'charm']
-        }}
-        isNobelWinner
-        rating={10}
-        title={<h1>A superhero facts</h1>}
-      />
-    </div>
+    //Solo puede tener un padre. Una solucion a intentar mostrar estos dos parrafor seria usar un div o React.Fragment
+    <React.Fragment>
+      <p>Algo</p>
+      <p>Algo mas</p>
+    </React.Fragment>
   );
 }
