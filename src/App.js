@@ -1,16 +1,21 @@
 import React from 'react';
 import './style.css';
 
-function Hello(props){
-  return (
-    <h2 className="saludo">Hello {props.name}</h2>
-  )
+function MyButton (props) {
+  const styleObject={}
+  if(props.isGrand){
+    styleObject.background = 'green'
+    styleObject.fontSize = '150%'
+  }
+  return <button style = {styleObject}>{props.legend}</button>
 }
 
 export default function App() {
   return (
     <>
-      <Hello name="Pepe" />
+      <MyButton isGrand legend="Buy" />
+      <MyButton legend="Cancel" />
     </>
   );
 }
+
